@@ -32,17 +32,17 @@ var skills = ["Web Dev", "Programming", "Learning", "JS"];
 // Add one to the last int in an array
 //function incrementLastArrayElement(_array)  {
 //    var newArray = [];
-//    newArray = _array.slice(0);
-//    var lastNumber = newArray.pop();
-//    newArray.push(lastNumber + 1);
+//    newArray = _array.slice(0); // creates copy of _array
+//    var lastNumber = newArray.pop(); // change newArray not _array
+//    newArray.push(lastNumber + 1); // not = b/c would change value
 //    return newArray;
 //}
 
 // Format strings
 //function nameChanger(oldName) {
 //    var finalName = oldName;
-//    var names = oldName.split(" ");
-//    names[1] = names[1].toUpperCase();
+//    var names = oldName.split(" "); // making copy variable
+//    names[1] = names[1].toUpperCase(); // changes value of this
 //    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
 //    finalName = names.join(" ");
 //    return finalName;
@@ -117,3 +117,13 @@ var education = {
 		}
 	]
 }
+
+// Removing < and > chars
+//var charEscape = function(_html) {
+ //   var newHTML = _html;
+
+//    newHTML = _html.replace(/</g, "&lt;");
+ //   newHTML = newHTML.replace(/>/g, "&gt;");
+
+ //   return newHTML;
+//};
