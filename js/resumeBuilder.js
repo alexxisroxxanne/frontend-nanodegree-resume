@@ -129,4 +129,21 @@ for (job in work.jobs) {
 
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedPosition = HTMLworkLocation.replace
+		("%data%", work.jobs[job].position);
+	$(".work-entry:last").append(formattedPosition);
+
+	var formattedDate = HTMLworkDates.replace
+		("%data%", work.jobs[job].dates);
+	$(".work-entry:last").append(formattedDate);
+
+	var formattedDescription = HTMLworkDescription.replace
+		("%data%", work.jobs[job].description);
+	$(".work-entry:last").append(formattedDescription);
+
+	// var formattedPositionDateDescription = formattedPosition +
+	//	formattedDate + formattedDescription;
+
+	// $(".work-entry:last").append(formattedPositionDateDescription);
 }
