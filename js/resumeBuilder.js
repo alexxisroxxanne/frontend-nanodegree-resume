@@ -159,3 +159,22 @@ $(document).click(function(loc) {
 	logClicks(x,y);
 	// logClicks(clickLocations);
 });
+
+$("#main").append(internationalizeButton);
+
+function inName(name) {
+	var finalName = name;
+    var names = name.trim().split(" "); // making copy variable
+
+    console.log(names);
+
+    names[1] = names[1].toUpperCase(); // changes value of this
+    names[0] = names[0].slice(0,1).toUpperCase() +
+    	names[0].slice(1).toLowerCase();
+
+    finalName = names.join(" ");
+
+    return finalName;
+}
+
+inName(bio.name); // not necessary - can use in console though
