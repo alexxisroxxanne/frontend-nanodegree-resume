@@ -115,18 +115,9 @@ function displayWork() {
 
 		var formattedEmployer = HTMLworkEmployer.replace
 			("%data%", work.jobs[job].employer);
-		// $("#employer").append(formattedJob);
-		// $("work-entry:last").append(formattedJob);
-		// formattedJob = HTMLworkEmployer.replace("%data", work.jobs.employer[1]);
-		// $("#employer").append(formattedJob);
-		// $("work-entry:last").append(formattedJob);
 
 		var formattedTitle = HTMLworkTitle.replace
 			("%data%", work.jobs[job].title);
-		// $("#title").append(formattedJob);
-		// $("work-entry:last").append(formattedJob);
-		// formattedJob = HTMLworkTitle.replace("%data", work.jobs.title[1]);
-		// $("#title").append(formattedJob);
 
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
@@ -139,14 +130,13 @@ function displayWork() {
 			("%data%", work.jobs[job].dates);
 		$(".work-entry:last").append(formattedDate);
 
+		var formattedLocation = HTMLworkLocation.replace
+			("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(formattedLocation);
+
 		var formattedDescription = HTMLworkDescription.replace
 			("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
-
-	// var formattedPositionDateDescription = formattedPosition +
-	//	formattedDate + formattedDescription;
-
-	// $(".work-entry:last").append(formattedPositionDateDescription);
 	}
 }
 
@@ -159,8 +149,6 @@ $(document).click(function(loc) {
 	logClicks(x,y);
 	// logClicks(clickLocations);
 });
-
-$("#main").append(internationalizeButton);
 
 function inName(name) {
 	var finalName = name;
@@ -177,4 +165,37 @@ function inName(name) {
     return finalName;
 }
 
+$("#main").append(internationalizeButton);
+
 inName(bio.name); // not necessary - can use in console though
+
+// Encapsulate function display in projects
+// Display projects data on resume
+projects.display = function() {
+
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitle = HTMLprojectTitle.replace
+			("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDates = HTMLprojectDates.replace
+			("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedDates);
+
+		var formattedDescription = HTMLprojectDescription.replace
+			("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedDescription);
+
+		if (project.projects[project].images.length > 0) {
+			for (image in projects.projects[project].images) {
+				var formattedImage = HTMLprojectImage.replace
+					("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+		}
+	}
+}
+
+projects.display();
