@@ -69,28 +69,6 @@ var work = {
 	]
 }
 
-
-function displayBio() {
-	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	$("#header").append(formattedName);
-	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	$("#header").append(formattedRole);
-
-	if (bio.skills.length > 0) {
-		$("#header").append(HTMLskillsStart);
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-		$("#skills").append(formattedSkill);
-	}
-}
-
-displayBio();
-
 var projects = {
 	"projects" : [
 		{
@@ -118,7 +96,28 @@ var projects = {
 	]
 }
 
-function displayWork() {
+bio.display = function()  {
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").append(formattedName);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").append(formattedRole);
+
+	if (bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+		$("#skills").append(formattedSkill);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+		$("#skills").append(formattedSkill);
+	}
+}
+
+bio.display();
+
+work.display = function() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
@@ -149,34 +148,7 @@ function displayWork() {
 	}
 }
 
-displayWork();
-
-$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-
-	logClicks(x,y);
-	// logClicks(clickLocations);
-});
-
-function inName(name) {
-	var finalName = name;
-    var names = name.trim().split(" "); // making copy variable
-
-    console.log(names);
-
-    names[1] = names[1].toUpperCase(); // changes value of this
-    names[0] = names[0].slice(0,1).toUpperCase() +
-    	names[0].slice(1).toLowerCase();
-
-    finalName = names.join(" ");
-
-    return finalName;
-}
-
-$("#main").append(internationalizeButton);
-
-inName(bio.name); // not necessary - can use in console though
+work.display();
 
 // Encapsulate function display in projects
 // Display projects data on resume
@@ -209,4 +181,34 @@ projects.display = function() {
 
 projects.display();
 
+
+// Add additional functionality
+
+// Click logger
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
+
+	logClicks(x,y);
+});
+
+// Name internationalize
+function inName(name) {
+	var finalName = name;
+    var names = name.trim().split(" "); // making copy variable
+
+    console.log(names);
+
+    names[1] = names[1].toUpperCase(); // changes value of this
+    names[0] = names[0].slice(0,1).toUpperCase() +
+    	names[0].slice(1).toLowerCase();
+
+    finalName = names.join(" ");
+
+    return finalName;
+}
+$("#main").append(internationalizeButton);
+inName(bio.name); // not necessary - can use in console though
+
+// Add Google Map
 $("#mapDiv").append(googleMap);
