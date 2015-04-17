@@ -61,3 +61,5 @@ function displayWork() {
 	// $(".work-entry:last").append(formattedPositionDateDescription);
 	}
 }
+
+// JS Anonymous Functions have no name, can be used as a parameter
