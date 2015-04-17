@@ -198,12 +198,54 @@ projects.display = function() {
 		}
 	}
 }
-
 projects.display();
 
 
-// Add additional functionality
+// Encapsulate function display in projects
+// Display projects data on resume
+education.display = function() {
+	for (school in education.schools)
+	{
+		$("#education").append(HTMLschoolStart);
 
+		/*
+		var formattedSchoolName = HTMLschoolName.replace("%data%",
+			education.schools[school].name);
+		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",
+			education.schools[school].degree);
+
+		$(".education-entry:last").append(formattedSchoolDegree);
+		$(".education-entry:last").prepend(formattedSchoolName);
+		*/
+
+		var formattedSchoolName = HTMLschoolName.replace("%data%",
+			education.schools[school].name);
+		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",
+			education.schools[school].degree);
+		$(".education-entry:last").append(formattedSchoolName
+			+ formattedSchoolDegree);
+
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%",
+			education.schools[school].dates);
+		$(".education-entry:last").append(formattedSchoolDates);
+
+		var formattedSchoolLocation = HTMLschoolLocation.replace
+			("%data%", education.schools[school].location);
+		$(".education-entry:last").append(formattedSchoolLocation);
+
+		var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",
+			education.schools[school].majors);
+		$(".education-entry:last").append(formattedSchoolMajor);
+
+	}
+}
+education.display();
+
+
+
+/*
+Add additional functionality
+*/
 // Click logger
 $(document).click(function(loc) {
 	var x = loc.pageX;
