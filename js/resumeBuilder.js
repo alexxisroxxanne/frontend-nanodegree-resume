@@ -84,7 +84,7 @@ var projects = {
 		},
 		{
 			"title" : "Udacity Project 2",
-			"dates" : "March 2015",
+			"dates" : "April 2015",
 			"description" : "Something About JavaScript",
 			"images" : [
 				// {
@@ -98,11 +98,10 @@ var projects = {
 
 
 function displayBio() {
-	$("#header").append(HTMLheaderName);
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-
-	$("#header").append(HTMLheaderRole);
+	$("#topContacts").append(HTMLheaderName);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#topContacts").append(HTMLheaderRole);
 
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
