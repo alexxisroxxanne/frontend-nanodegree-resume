@@ -97,10 +97,31 @@ var projects = {
 }
 
 bio.display = function()  {
+	for (contact in bio.contacts) {
+		var formattedMobile = HTMLmobile.replace("%data%",
+			bio.contacts[contact].mobile);
+		$("#topContacts").append(formattedMobile);
+		var formattedEmail = HTMLemail.replace("%data%",
+			bio.contacts[contact].email);
+		$("#topContacts").append(formattedEmail);
+		var formattedGithub = HTMLgithub.replace("%data%",
+			bio.contacts[contact].github);
+		$("#topContacts").append(formattedGithub);
+		var formattedTwitter = HTMLtwitter.replace("%data%",
+			bio.contacts[contact].twitter);
+		$("#topContacts").append(formattedTwitter);
+		var formattedLocation1 = HTMLlocation.replace("%data%",
+			bio.contacts[contact].location);
+		$("#topContacts").append(formattedLocation1);
+	}
+
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	$("#header").append(formattedName);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	$("#header").append(formattedRole);
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+	$("#header").append(formattedBioPic);
 
 	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
