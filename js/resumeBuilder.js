@@ -204,19 +204,12 @@ projects.display();
 // Encapsulate function display in projects
 // Display projects data on resume
 education.display = function() {
+
+	$("#education").append(HTMLschoolStart);
+
 	for (school in education.schools)
 	{
-		$("#education").append(HTMLschoolStart);
 
-		/*
-		var formattedSchoolName = HTMLschoolName.replace("%data%",
-			education.schools[school].name);
-		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",
-			education.schools[school].degree);
-
-		$(".education-entry:last").append(formattedSchoolDegree);
-		$(".education-entry:last").prepend(formattedSchoolName);
-		*/
 
 		var formattedSchoolName = HTMLschoolName.replace("%data%",
 			education.schools[school].name);
@@ -237,6 +230,25 @@ education.display = function() {
 			education.schools[school].majors);
 		$(".education-entry:last").append(formattedSchoolMajor);
 
+	}
+
+	$(".education-entry:last").append(HTMLonlineClasses);
+
+	for (course in education.onlineCourses) {
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",
+			education.onlineCourses[course].title);
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",
+			education.onlineCourses[course].school);
+		$(".education-entry:last").append(formattedOnlineTitle
+			+ formattedOnlineSchool);
+
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%",
+			education.onlineCourses[course].date);
+		$(".education-entry:last").append(formattedOnlineDates);
+
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%",
+			education.onlineCourses[course].url);
+		$(".education-entry:last").append(formattedOnlineURL);
 	}
 }
 education.display();
