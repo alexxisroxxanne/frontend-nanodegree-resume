@@ -96,6 +96,8 @@ var projects = {
 	]
 }
 
+// Encapsulate function display in bio
+// Display bio data on resume
 bio.display = function()  {
 	for (contact in bio.contacts) {
 		var formattedMobile = HTMLmobile.replace("%data%",
@@ -123,21 +125,22 @@ bio.display = function()  {
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 	$("#header").append(formattedBioPic);
 
-	if (bio.skills.length > 0) {
-		$("#header").append(HTMLskillsStart);
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%",
+		bio.welcomeMessage);
+	$("#header").append(formattedWelcomeMsg);
+
+	$("#header").append(HTMLskillsStart);
+	for (skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%",
+			bio.skills[skill]);
 		$("#skills").append(formattedSkill);
 	}
 }
-
 bio.display();
 
+
+// Encapsulate function display in work
+// Display work data on resume
 work.display = function() {
 	for (job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
@@ -150,10 +153,6 @@ work.display = function() {
 
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
-
-		// var formattedPosition = HTMLworkPosition.replace
-		//	("%data%", work.jobs[job].position);
-		// $(".work-entry:last").append(formattedPosition);
 
 		var formattedDate = HTMLworkDates.replace
 			("%data%", work.jobs[job].dates);
@@ -168,8 +167,8 @@ work.display = function() {
 		$(".work-entry:last").append(formattedDescription);
 	}
 }
-
 work.display();
+
 
 // Encapsulate function display in projects
 // Display projects data on resume
