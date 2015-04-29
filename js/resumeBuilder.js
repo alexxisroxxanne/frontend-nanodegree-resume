@@ -293,3 +293,62 @@ inName(bio.name); // not necessary - can use in console though
 // Add Google Map
 $("#mapDiv").append(googleMap);
 
+
+
+
+/*
+	Change the CSS from its default
+*/
+
+// change main bkgd color to black
+$("#main").css("background-color", "#000000");
+
+// change orange text to pink
+var nameText = $("h1").first();
+nameText.css("color", "#df30cb");
+$("#skillsH3").css("color", "#df30cb");
+// $(".orange").css("color", "#df30cb");
+$(".orange-text").css("color", "#df30cb");
+
+// change let's connect orange to green
+$(".center-text").css("background-color", "#09852a");
+
+// change role color and add spacing
+var roleText = $("span").first();
+roleText.css("color", "#e2e320");
+// roleText.css("padding-left", "10px");
+
+// edit layout of header - name and role etc.
+nameText.css("display", "block");
+nameText.css("text-align", "center");
+nameText.css("padding", "10px 0px");
+roleText.css("text-align", "center");
+roleText.css("display", "inherit");
+roleText.css("padding-bottom", "20px");
+$("#topContacts").css("padding", "20px 10px");
+
+// change header and footer background to black
+$("#header").css("background-color", "#000000");
+$(".dark-gray").css("background-color", "#000000");
+
+// change lighter gray to darker gray
+$(".gray").css("background-color", "#383838");
+
+// change white bkgd to lighter gray
+$("#projects").css("background-color", "#535254");
+$("#mapDiv").css("background-color", "#535254");
+
+// change link color
+$("a").css("color", "#09c7c2");
+
+// change h2 color
+$("h2").css("color", "#e687ec");
+
+// change p text color
+$("p").css("color", "#ffffff");
+
+// change em text color
+$("em").css("color", "#ffffff");
+
+// change h3 text color
+$("h3").css("color", "#ffffff");
