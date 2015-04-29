@@ -77,10 +77,8 @@ var projects = {
 			"dates" : "February 2015",
 			"description" : "Mock-Up of Image",
 			"images" : [
-				//{
 				{	"image1" : "images/fry.jpg"},
 				{	"image2" : "images/197x143.gif"}
-				//}
 			]
 		},
 		{
@@ -88,10 +86,8 @@ var projects = {
 			"dates" : "April 2015",
 			"description" : "Something About JavaScript",
 			"images" : [
-				// {
-					{"image1" : "images/fry.jpg"},
-					{"image2" : "images/197x143.gif"}
-				// }
+				{"image1" : "images/fry.jpg"},
+				{"image2" : "images/197x143.gif"}
 			]
 		}
 	]
@@ -296,3 +292,4 @@ inName(bio.name); // not necessary - can use in console though
 
 // Add Google Map
 $("#mapDiv").append(googleMap);
+
