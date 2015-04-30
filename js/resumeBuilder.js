@@ -298,8 +298,10 @@ $("#mapDiv").append(googleMap);
 
 /*
 	Change the CSS from its default
-*/
 
+	Comment out rest of code to see original design
+*/
+/*
 // change main bkgd color to black
 $("#main").css("background-color", "#000000");
 
@@ -307,7 +309,6 @@ $("#main").css("background-color", "#000000");
 var nameText = $("h1").first();
 nameText.css("color", "#df30cb");
 $("#skillsH3").css("color", "#df30cb");
-// $(".orange").css("color", "#df30cb");
 $(".orange-text").css("color", "#df30cb");
 
 // change let's connect orange to green
@@ -352,3 +353,4 @@ $("em").css("color", "#ffffff");
 
 // change h3 text color
 $("h3").css("color", "#ffffff");
+*/
