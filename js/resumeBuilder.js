@@ -310,17 +310,16 @@ $("#main").css("background-color", "#000000");
 
 // change orange text to pink
 var nameText = $("h1").first();
-nameText.css("color", "#df30cb");
-$("#skillsH3").css("color", "#df30cb");
-$(".orange-text").css("color", "#df30cb");
+nameText.css("color", "#f09fe6");
+$("#skillsH3").css("color", "#f09fe6");
+$(".orange-text").css("color", "#f09fe6");
 
 // change let's connect orange to green
-$(".center-text").css("background-color", "#09852a");
+$(".center-text").css("background-color", "#9ff0a9");
 
-// change role color and add spacing
+// change role color
 var roleText = $("span").first();
-roleText.css("color", "#e2e320");
-// roleText.css("padding-left", "10px");
+roleText.css("color", "#e6f09f");
 
 // edit layout of header - name and role etc.
 nameText.css("display", "block");
@@ -343,7 +342,7 @@ $("#projects").css("background-color", "#535254");
 $("#mapDiv").css("background-color", "#535254");
 
 // change link color
-$("a").css("color", "#09c7c2");
+$("a").css("color", "#9fe6f0");
 
 // change h2 color
 $("h2").css("color", "#e687ec");
