@@ -354,6 +354,6 @@ $("p").css("color", "#ffffff");
 // change em text color
 $("em").css("color", "#ffffff");
 
-// change h3 text color
-$("h3").css("color", "#ffffff");
+// change h3 text color - (online classes)
+$("h3").css("color", "#e687ec");
 
