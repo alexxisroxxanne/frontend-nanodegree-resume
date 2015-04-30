@@ -301,7 +301,7 @@ $("#mapDiv").append(googleMap);
 
 	Comment out rest of code to see original design
 */
-
+/*
 // change main bkgd color to black
 $("#main").css("background-color", "#000000");
 
@@ -353,4 +353,4 @@ $("em").css("color", "#ffffff");
 
 // change h3 text color
 $("h3").css("color", "#ffffff");
-
+*/
