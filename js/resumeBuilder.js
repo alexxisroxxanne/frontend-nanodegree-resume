@@ -10,7 +10,10 @@ var bio = {
 			"location" : "San Diego, CA"
 		}
 	],
-	"welcomeMessage" : "Welcome to my portfolio!",
+	"welcomeMessage" : "Welcome to my portfolio! Don't worry,"
+		+ " I wouldn't actually use these colors. They"
+		+ " will be changed at some point. You can comment them out"
+		+ " at the bottom of resumeBuilder.js.",
 	"skills" : ["HTML", "JavaScript", "JQuery", "Git", "GitHub"],
 	"biopic" : "images/fry.jpg"
 }
@@ -301,7 +304,7 @@ $("#mapDiv").append(googleMap);
 
 	Comment out rest of code to see original design
 */
-/*
+
 // change main bkgd color to black
 $("#main").css("background-color", "#000000");
 
@@ -353,4 +356,4 @@ $("em").css("color", "#ffffff");
 
 // change h3 text color
 $("h3").css("color", "#ffffff");
-*/
+
