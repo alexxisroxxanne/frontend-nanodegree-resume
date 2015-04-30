@@ -10,10 +10,9 @@ var bio = {
 			"location" : "San Diego, CA"
 		}
 	],
-	"welcomeMessage" : "Welcome to my portfolio! Don't worry,"
-		+ " I wouldn't actually use these colors. They"
-		+ " will be changed at some point. You can comment them out"
-		+ " at the bottom of resumeBuilder.js.",
+	"welcomeMessage" : "Welcome to my portfolio! Not the color "
+		+ "scheme you were expecting? You can comment out my "
+		+ "css edits at the bottom of resumeBuilder.js.",
 	"skills" : ["HTML", "JavaScript", "JQuery", "Git", "GitHub"],
 	"biopic" : "images/fry.jpg"
 }
@@ -310,17 +309,18 @@ $("#main").css("background-color", "#ffffff");
 
 // change orange text to pink
 var nameText = $("h1").first();
-nameText.css("color", "#97b1d7");
-$("#skillsH3").css("color", "#97b1d7");
+nameText.css("color", "#6088c2");
+$("#skillsH3").css("color", "#85a3d0");
 $(".orange-text").css("color", "#97b1d7");
 
 // change let's connect orange to green
-$(".center-text").css("background-color", "#9ff0a9");
+$(".center-text").css("background-color", "#b1d797");
 
 // change header text colors
 var roleText = $("span").first();
-roleText.css("color", "#e6f09f");
-$("#topContacts").css("color", "#000000");
+roleText.css("color", "#b1d797");
+$(".white-text").css("color", "#2d3540");
+$(".welcome-message").css("color", "#2d3540");
 
 // edit layout of header - name and role etc.
 nameText.css("display", "block");
@@ -332,28 +332,28 @@ roleText.css("padding-bottom", "20px");
 $("#topContacts").css("padding", "20px 10px");
 
 // change header and footer background to black
-$("#header").css("background-color", "#000000");
+$("#header").css("background-color", "#ffffff");
 $(".dark-gray").css("background-color", "#ffffff");
 
 // change lighter gray to darker gray
-$(".gray").css("background-color", "#383838");
+$(".gray").css("background-color", "#f4f7fb");
 
 // change white bkgd to lighter gray
-$("#projects").css("background-color", "#535254");
-$("#mapDiv").css("background-color", "#535254");
+$("#projects").css("background-color", "#eaeff7");
+$("#mapDiv").css("background-color", "#eaeff7");
 
 // change link color
-$("a").css("color", "#9fe6f0");
+$("a").css("color", "#d797b1");
 
 // change h2 color
-$("h2").css("color", "#e687ec");
+$("h2").css("color", "#85a3d0");
 
 // change p text color
-$("p").css("color", "#879fcl");
+$("p").css("color", "#2d3540");
 
 // change em text color
-$("em").css("color", "#879fcl");
+$("em").css("color", "#2d3540");
 
 // change h3 text color - (online classes)
-$("h3").css("color", "#e687ec");
+$("h3").css("color", "#85a3d0");
 
