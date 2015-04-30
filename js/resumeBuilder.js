@@ -306,20 +306,21 @@ $("#mapDiv").append(googleMap);
 */
 
 // change main bkgd color to black
-$("#main").css("background-color", "#000000");
+$("#main").css("background-color", "#ffffff");
 
 // change orange text to pink
 var nameText = $("h1").first();
-nameText.css("color", "#f09fe6");
-$("#skillsH3").css("color", "#f09fe6");
-$(".orange-text").css("color", "#f09fe6");
+nameText.css("color", "#97b1d7");
+$("#skillsH3").css("color", "#97b1d7");
+$(".orange-text").css("color", "#97b1d7");
 
 // change let's connect orange to green
 $(".center-text").css("background-color", "#9ff0a9");
 
-// change role color
+// change header text colors
 var roleText = $("span").first();
 roleText.css("color", "#e6f09f");
+$("#topContacts").css("color", "#000000");
 
 // edit layout of header - name and role etc.
 nameText.css("display", "block");
@@ -332,7 +333,7 @@ $("#topContacts").css("padding", "20px 10px");
 
 // change header and footer background to black
 $("#header").css("background-color", "#000000");
-$(".dark-gray").css("background-color", "#000000");
+$(".dark-gray").css("background-color", "#ffffff");
 
 // change lighter gray to darker gray
 $(".gray").css("background-color", "#383838");
@@ -348,10 +349,10 @@ $("a").css("color", "#9fe6f0");
 $("h2").css("color", "#e687ec");
 
 // change p text color
-$("p").css("color", "#ffffff");
+$("p").css("color", "#879fcl");
 
 // change em text color
-$("em").css("color", "#ffffff");
+$("em").css("color", "#879fcl");
 
 // change h3 text color - (online classes)
 $("h3").css("color", "#e687ec");
