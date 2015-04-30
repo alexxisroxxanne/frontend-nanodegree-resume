@@ -1,0 +1,7 @@
+Resources Used in Udacity Project 2:
+
+1) jQuery API - http://api.jquery.com/
+
+2) Mozilla JavaScript Reference Library - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
+3) Udacity Discussion Forum - http://discussions.udacity.com/
