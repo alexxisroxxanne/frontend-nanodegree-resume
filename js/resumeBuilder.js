@@ -77,8 +77,8 @@ var projects = {
 			"dates" : "February 2015",
 			"description" : "Mock-Up of Image",
 			"images" : [
-				{	"image1" : "images/fry.jpg"},
-				{	"image2" : "images/197x143.gif"}
+				"images/fry.jpg",
+				"images/197x148.gif"
 			]
 		},
 		{
@@ -86,8 +86,8 @@ var projects = {
 			"dates" : "April 2015",
 			"description" : "Something About JavaScript",
 			"images" : [
-				{"image1" : "images/fry.jpg"},
-				{"image2" : "images/197x143.gif"}
+				"images/fry.jpg",
+				"images/197x148.gif"
 			]
 		}
 	]
