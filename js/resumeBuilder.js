@@ -17,7 +17,6 @@ var bio = {
 	"biopic" : "images/fry.jpg",
 
 	// Encapsulate function display in bio
-	// Display bio data on resume
 	"display" : function()  {
 		for (contact in bio.contacts) {
 			var formattedMobile = HTMLmobile.replace("%data%",
@@ -67,7 +66,6 @@ var bio = {
 	}
 }
 
-bio.display();
 
 var education = {
 	"schools" : [
@@ -103,7 +101,6 @@ var education = {
 		}
 	],
 
-	// Encapsulate function display in education
 	// Display education data on resume
 	"display" : function() {
 
@@ -155,7 +152,6 @@ var education = {
 	}
 }
 
-education.display();
 
 var work = {
 	"jobs" : [
@@ -175,7 +171,6 @@ var work = {
 		}
 	],
 
-	// Encapsulate function display in work
 	// Display work data on resume
 	"display" : function() {
 		for (job in work.jobs) {
@@ -205,7 +200,6 @@ var work = {
 	}
 }
 
-work.display();
 
 var projects = {
 	"projects" : [
@@ -229,7 +223,6 @@ var projects = {
 		}
 	],
 
-	// Encapsulate function display in projects
 	// Display projects data on resume
 	"display" : function() {
 
@@ -259,13 +252,20 @@ var projects = {
 	}
 }
 
+
+// Call display functions
+bio.display();
+education.display();
+work.display();
 projects.display();
+
 
 
 
 /*
 Add additional functionality
 */
+
 // Click logger
 $(document).click(function(loc) {
 	var x = loc.pageX;
@@ -290,7 +290,7 @@ function inName(name) {
     return finalName;
 }
 $("#main").append(internationalizeButton);
-inName(bio.name); // not necessary - can use in console though
+inName(bio.name); // for use in console though
 
 // Add Google Map
 $("#mapDiv").append(googleMap);
@@ -304,23 +304,23 @@ $("#mapDiv").append(googleMap);
 	Comment out rest of code to see original design
 */
 
-// change main bkgd color to black
+// main background color change - now white
 $("#main").css("background-color", "#ffffff");
 
-// change orange text to pink
-var nameText = $("h1").first();
+// change orange text to blue
+var nameText = $("h1").first(); // Name
 nameText.css("color", "#6088c2");
-$("#skillsH3").css("color", "#85a3d0");
-$(".orange-text").css("color", "#97b1d7");
+$("#skillsH3").css("color", "#85a3d0"); // Skills at a Glance
+$(".orange-text").css("color", "#97b1d7"); // in Footer
 
-// change let's connect orange to green
+// change let's connect from orange to green
 $(".center-text").css("background-color", "#b1d797");
 
-// change header text colors
-var roleText = $("span").first();
+// change header section text colors
+var roleText = $("span").first(); // Web Developer
 roleText.css("color", "#b1d797");
-$(".white-text").css("color", "#2d3540");
-$(".welcome-message").css("color", "#2d3540");
+$(".white-text").css("color", "#2d3540"); // contact info
+$(".welcome-message").css("color", "#2d3540"); // welcome msg
 
 // edit layout of header - name and role etc.
 nameText.css("display", "block");
@@ -331,29 +331,29 @@ roleText.css("display", "inherit");
 roleText.css("padding-bottom", "20px");
 $("#topContacts").css("padding", "20px 10px");
 
-// change header and footer background to black
+// change header and footer background color - now white
 $("#header").css("background-color", "#ffffff");
 $(".dark-gray").css("background-color", "#ffffff");
 
-// change lighter gray to darker gray
+// change lighter gray bkdg to light blue
 $(".gray").css("background-color", "#f4f7fb");
 
-// change white bkgd to lighter gray
+// change white bkgd to different light blue
 $("#projects").css("background-color", "#eaeff7");
 $("#mapDiv").css("background-color", "#eaeff7");
 
-// change link color
+// change links color
 $("a").css("color", "#d797b1");
 
 // change h2 color
 $("h2").css("color", "#85a3d0");
 
-// change p text color
+// change p/paragraph text color
 $("p").css("color", "#2d3540");
 
-// change em text color
+// change em/italic text color
 $("em").css("color", "#2d3540");
 
-// change h3 text color - (online classes)
-$("h3").css("color", "#85a3d0");
+// change h3 text color
+$("h3").css("color", "#85a3d0"); // Online Classes
 
